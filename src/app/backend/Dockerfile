@@ -1,17 +1,20 @@
-# Use an official Python runtime as a parent image
-FROM python:3.10-alpine
+# Use the official Node.js image as a base image
+FROM node:18-alpine
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /usr/src/app
 
-# Copy the current directory contents into the container
-COPY src/ .
+# Copy the package.json and package-lock.json to install dependencies
+COPY package*.json ./
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Install project dependencies
+RUN npm install
 
-# Make port 8000 available
-EXPOSE 8000
+# Copy the rest of the application code to the working directory
+COPY . .
 
-# Run the backend
-CMD ["python", "app.py"]
+# Expose the port the app will run on (optional if the app runs)
+EXPOSE 3000
+
+# Run tests using Jest
+CMD ["npm", "test"]
