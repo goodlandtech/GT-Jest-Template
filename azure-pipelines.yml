@@ -8,7 +8,6 @@ trigger:
       - Release-*
       - V-*
       - Feature-*
-      - US-*
 pool:
   vmImage: 'ubuntu-latest'
 stages:
