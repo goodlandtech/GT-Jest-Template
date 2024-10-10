@@ -1,7 +1,7 @@
 
-# GT-REACT-PYTHON-TEMPLATE
+# GT-Jest-TEMPLATE
 
-This project is a fullstack application with a **React frontend** and a **Python backend**, orchestrated using **Docker Compose**.
+This project is a fullstack application with a **Node backend**, orchestrated using **Docker Compose**.
 
 ## Project Structure
 
@@ -14,21 +14,14 @@ This project is a fullstack application with a **React frontend** and a **Python
 ├── src
 │   └── app
 │       ├── backend
-│       │   ├── __tests__            # Unit/Integration tests for backend
-│       │   ├── README.md            # Backend-specific documentation
-│       │   ├── .env                 # Backend-specific environment variables
-│       │   ├── Dockerfile           # Docker setup for the backend
-│       │   ├── .dockerignore        # Ignore files for backend Docker context
-│       │   └── src                  # Source code for the backend
-│       │   └── logs/                # Directory for logs, can be mounted to host
-│       └── frontend
-│           ├── __tests__            # Unit/Integration tests for frontend
-│           ├── Dockerfile           # Docker setup for the frontend
-│           ├── .env                 # Frontend-specific environment variables
-│           ├── .dockerignore        # Ignore files for frontend Docker context
-│           ├── src                  # Source code for the frontend
-│           ├── public/              # Static files for the frontend
-│           └── README.md            # Frontend-specific documentation
+│          ├── __tests__            # Unit/Integration tests for backend
+│          ├── README.md            # Backend-specific documentation
+│          ├── .env                 # Backend-specific environment variables
+│          ├── Dockerfile           # Docker setup for the backend
+│          ├── .dockerignore        # Ignore files for backend Docker context
+│          └── src                  # Source code for the backend
+│          └── logs/                # Directory for logs, can be mounted to host
+│       
 ```
 
 ## Setup Instructions
@@ -45,12 +38,12 @@ To run this project, ensure you have the following installed:
 
 1. **Clone the repository** to your local machine:
    ```bash
-   git clone https://github.com/goodlandtech/GT-React-Python-Template.git
+   git clone https://github.com/goodlandtech/GT-Jest-Template.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd GT-React-Python-Template
+   cd GT-Jest-Template
    ```
 
 ### Setting up Environment Variables
@@ -70,11 +63,9 @@ To run this project, ensure you have the following installed:
 
 ### Technologies Used
 
-- **React** for the frontend
-- **Python** (Flask or FastAPI) for the backend
+
+- **Jest** for testing  
 - **Docker Compose** to manage containers
 
-### Azure DevOps CI/CD
 
-This project includes a CI/CD pipeline using **Azure Pipelines**. Configuration is in the `azure-pipelines.yml` file.
 
